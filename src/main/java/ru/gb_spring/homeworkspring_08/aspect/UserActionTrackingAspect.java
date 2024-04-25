@@ -45,7 +45,7 @@ public class UserActionTrackingAspect {
         Object result = joinPoint.proceed();
         runtime = System.currentTimeMillis() - runtime;
 
-        printf(", выполнено за: %d мс", runtime, Colors.GREEN);
+        printf(", выполнено за: %d мс\n", runtime, Colors.GREEN);
         println("Время окончания: " + LocalDateTime.now(), Colors.YELLOW);
         println("=====================================================================================================", Colors.MAGENTA);
         return result;
